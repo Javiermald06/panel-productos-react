@@ -13,7 +13,7 @@ function InsertarPage() {
             <h2>Registrar nuevo producto</h2>
             {mensaje && <p className="exito">{mensaje}</p>}
             <ProductoForm
-                valoresIniciales={{ nombre: "", precio: "", stock: "0" }}
+                valoresIniciales={{ nombre: "", precio: "", stock: "0", usuario: "" }}
                 textoBoton="Guardar producto"
                 onGuardar={guardar}
                 limpiarAlGuardar
