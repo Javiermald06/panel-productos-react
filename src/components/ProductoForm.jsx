@@ -20,6 +20,7 @@ function ProductoForm({
             nombre: valores.nombre.trim(),
             precio: Number(valores.precio),
             stock: Number(valores.stock),
+            usuario: valores.usuario ? valores.usuario.trim() : "",
           });
           if (limpiarAlGuardar) resetForm();
         } catch (error) {
@@ -49,6 +50,12 @@ function ProductoForm({
             <label htmlFor="stock">Stock</label>
             <Field id="stock" name="stock" type="number" step="1" />
             <ErrorMessage name="stock" component="p" className="error" />
+          </div>
+
+          <div className="campo">
+            <label htmlFor="usuario">Usuario</label>
+            <Field id="usuario" name="usuario" type="text" />
+            <ErrorMessage name="usuario" component="p" className="error" />
           </div>
 
           {status && <p className="error">{status}</p>}

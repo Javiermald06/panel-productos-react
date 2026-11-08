@@ -13,5 +13,9 @@ export const productoSchema = Yup.object({
         .typeError("Ingresa un stock válido")
         .required("El stock es obligatorio")
         .integer("El stock debe ser un número entero")
-        .min(0, "El stock no puede ser negativo")
+        .min(0, "El stock no puede ser negativo"),
+    usuario: Yup.string()
+        .trim()
+        .required("El usuario es obligatorio")
+        .max(50, "El usuario no puede superar 50 caracteres")
 });

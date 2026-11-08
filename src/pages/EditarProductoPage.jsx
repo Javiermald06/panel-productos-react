@@ -40,7 +40,8 @@ function EditarProductoPage() {
                 valoresIniciales={{
                     nombre: producto.nombre ?? "",
                     precio: String(producto.precio ?? ""),
-                    stock: String(producto.stock ?? "")
+                    stock: String(producto.stock ?? ""),
+                    usuario: producto.Usuario ?? producto.usuario ?? ""
                 }}
                 textoBoton="Guardar cambios"
                 onGuardar={guardar}
